@@ -42,8 +42,8 @@ public static class GerarLabirinto
 
         recursion(r, c);
 
-        int rng = Random.Range(1, w);
-        maze[h-1][rng] = 0;
+        //int rng = Random.Range(1, w);
+        maze[height-1][width-2] = 0;
         maze[1][1] = 3;
         //　Allocate the maze with recursive method
         string str="";
