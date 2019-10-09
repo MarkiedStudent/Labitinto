@@ -40,8 +40,12 @@ public static class GerarLabirinto
         // Starting cell
         maze[r][c] = 0;
 
-        //　Allocate the maze with recursive method
         recursion(r, c);
+
+        int rng = Random.Range(1, w);
+        maze[h-1][rng] = 0;
+        maze[1][1] = 3;
+        //　Allocate the maze with recursive method
         string str="";
         for(int i=0;i<maze.Length;i++)
         {
@@ -53,6 +57,7 @@ public static class GerarLabirinto
                 }
                 str=string.Concat(str, maze[i][j].ToString());
             }
+
             str=string.Concat(str, "\r\n");
         }
 
