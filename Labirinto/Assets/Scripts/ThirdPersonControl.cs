@@ -5,7 +5,7 @@ using UnityEngine;
 public class ThirdPersonControl : MonoBehaviour
 {
     Rigidbody rb;
-    public float vel = 3;
+    public float vel = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,7 @@ public class ThirdPersonControl : MonoBehaviour
     void Update()
     {
         Vector3 moveVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        rb.MovePosition(transform.position + moveVector * vel);
+        rb.velocity=( moveVector * 10 );
+        //transform.Translate(moveVector);
     }
 }

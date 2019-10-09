@@ -14,6 +14,6 @@ public class Pontuacao : MonoBehaviour
         pontos += pts;
         //Debug.Log("Pontuacao" + pts);
 
-        txtPts.text = pontos.ToString();
+        //txtPts.text = pontos.ToString();
     }
 }
